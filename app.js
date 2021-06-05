@@ -14,9 +14,9 @@ const params = {
 }
 
 client.post('statuses/update', params, function(err, tweets, res) {
-    if(!err) {
-        console.log('success!)')
-    }   
+    if(err) throw err;
+        console.log(tweets);    // Tweet body.
+        console.log(res);       // Raw response object.
 })
 
 // var params = { screen_name: 'danibarstad' };
