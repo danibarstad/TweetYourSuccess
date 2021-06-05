@@ -15,13 +15,6 @@ const params = {
 
 client.post('statuses/update', params, function(err, tweets, res) {
     if(err) throw err;
-        console.log(tweets);    // Tweet body.
-        console.log(res);       // Raw response object.
+    console.log(tweets);
+    console.log(res);
 })
-
-// var params = { screen_name: 'danibarstad' };
-// client.get('statuses/user_timeline', params, function (error, tweets, response) {
-//     if (!error) {
-//         console.log(tweets);
-//     }
-// });

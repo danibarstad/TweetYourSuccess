@@ -18,7 +18,6 @@
   "homepage": "https://github.com/danibarstad/TweetYourSuccess#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "twitter": "^1.7.1",
-    "twitter-v2": "^1.1.0"
+    "twitter": "^1.7.1"
   }
 }
