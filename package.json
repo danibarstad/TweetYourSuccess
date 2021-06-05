@@ -1,0 +1,23 @@
+{
+  "name": "twitterapi",
+  "version": "1.0.0",
+  "description": "working with the twitter api.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danibarstad/TweetYourSuccess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danibarstad/TweetYourSuccess/issues"
+  },
+  "homepage": "https://github.com/danibarstad/TweetYourSuccess#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "twitter-v2": "^1.1.0"
+  }
+}
