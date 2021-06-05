@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const Twitter = require('twitter-v2');
+const Twitter = require('twitter');
 
 const client = new Twitter({
     consumer_key: process.env.TWITTER_KEY,
@@ -9,13 +9,19 @@ const client = new Twitter({
     access_token_secret: process.env.TWITTER_ACCESS_SECRET,
 });
 
-// const { data } = await client.get('tweets', { ids: '1228393702244134912' });
-// console.log(data);
-
 const params = {
     status: 'This is a test tweet using the Twitter API.'
 }
 
-client.post('statuses/update', params, function(err, tweet, res) {
-    if(err) throw err;    
+client.post('statuses/update', params, function(err, tweets, res) {
+    if(!err) {
+        console.log('success!)')
+    }   
 })
+
+// var params = { screen_name: 'danibarstad' };
+// client.get('statuses/user_timeline', params, function (error, tweets, response) {
+//     if (!error) {
+//         console.log(tweets);
+//     }
+// });
