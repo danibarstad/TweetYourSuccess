@@ -11,19 +11,14 @@ const client = new Twitter({
 const duration = ''
 const company = ''
 const position = ''
-const status = `After ${duration}, I have finally received my first job offer in tech! ` +
-                `I'm so excited to be starting at ${company} as a ${position}!`
 
 const params = {
-    status: status
+    status: `After ${duration}, I have finally received my first job offer in tech! ` +
+            `I'm so excited to be starting at ${company} as a ${position}!`
 }
 
-if (status.length <= 240) {
-    client.post('statuses/update', params, function(err, tweets, res) {
-        if(err) throw err;
-        console.log(tweets);
-        console.log(res);
-    })
-} else {
-    console.log(`Character Count: ${status.length}`)
-}
+client.post('statuses/update', params, function(err, tweets, res) {
+    if(err) throw err;
+    console.log(tweets);
+    console.log(res);
+})
